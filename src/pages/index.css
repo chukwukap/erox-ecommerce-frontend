@@ -1,0 +1,112 @@
+.home-page {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.home-page .hero {
+  width: 100%;
+  background-color: #e2e6e9;
+  min-height: 50vh;
+  /* border: 2px solid magenta; */
+  /* display: grid; */
+}
+.home-page .hero > * {
+  width: var(--gutter-width);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: minmax(20rem, 25rem);
+  justify-content: space-around;
+  /* border: 2px solid green; */
+}
+
+.home-page .hero .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5vh;
+  justify-self: flex-start;
+}
+.home-page .hero .headline {
+  font-size: 32px;
+  line-height: 2rem;
+  font-weight: bold;
+  color: #354e57;
+}
+.home-page .hero .prgh {
+  font-size: 1rem;
+  color: #354e57;
+}
+
+.home-page .hero .img-display > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* media query for hero section */
+@media (max-width: 768px) {
+  .home-page .hero > * {
+    grid-template-columns: auto;
+  }
+  .home-page .hero .img-display {
+    grid-row: 1;
+  }
+}
+
+/* Products section  */
+.home-page .product-section {
+  width: 100%;
+  min-height: 70vh;
+}
+.home-page .product-section > * {
+  width: 100%;
+  margin-inline: auto;
+  max-width: var(--max-gutter-width);
+  display: grid;
+  grid-template-rows: minmax(2rem, 141px) auto;
+  gap: 1rem;
+}
+.home-page .product-section .bar {
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid #547665;
+}
+.home-page .product-section .bar .title {
+  font-weight: 600;
+  font-size: var(--f-size-3x);
+}
+.home-page .product-section .bar .subtitle {
+  font-size: var(--f-size-2x);
+}
+.home-page .product-section .body {
+  display: grid;
+  grid-template-rows: minmax(2rem, 3rem) 1fr;
+  /* border: 2px solid green; */
+}
+.home-page .product-section .body .headline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #2e2e22;
+  font-size: 14px;
+  font-weight: 600;
+  /* border: 2px solid green; */
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+  margin-inline: auto;
+}
+.home-page .product-section .body .products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 15rem));
+  align-items: center;
+  padding: 1rem 0;
+  justify-content: center;
+  gap: 2vh;
+}
+
+/* Teaser Section */
