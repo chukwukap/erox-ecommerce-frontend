@@ -7,8 +7,10 @@
 import Layout from "./components/Layout";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Public from "./components/Public";
+import useTitle from "./hooks/useTitle";
 
 function App() {
+  useTitle("Erox");
   return (
     <Routes>
       <Route path="/*" element={<Layout />}>
