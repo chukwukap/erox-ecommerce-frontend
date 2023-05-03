@@ -2,6 +2,7 @@ import Button from "../components/Button.js";
 import ProductExcerpt from "../components/ProductExcerpt.js";
 import { Link } from "react-router-dom";
 import TeaserSection from "../components/TeaserSection.js";
+import IngredientExcerpt from "../components/IngredientExcerpt.js";
 function Home() {
   return (
     <main className="home-page">
@@ -21,13 +22,13 @@ function Home() {
           </div>
         </div>
       </section>
+      <section className="bar">
+        <h1 className="title">solutions for all skin health</h1>
+        <p className="subtitle">Explore our innovative skincare products</p>
+      </section>
       <section className="product-section">
         <div>
-          <div className="bar">
-            <h1 className="title">solutions for all skin health</h1>
-            <p className="subtitle">Explore our innovative skincare products</p>
-          </div>
-          <div className="body">
+          <div className="content">
             <div className="headline">
               <h3>Most popular</h3>
               <h3>
@@ -43,6 +44,32 @@ function Home() {
         </div>
       </section>
       <TeaserSection teaser={{}} />
+      <section className="product-section">
+        <div className="content">
+          <div className="headline">
+            <h3>Top Rated</h3>
+            <h3>
+              <Link>Shop all products</Link>
+            </h3>
+          </div>
+          <div className="products">
+            {new Array(10).fill({}).map((product) => {
+              return <ProductExcerpt product={product} />;
+            })}
+          </div>
+        </div>
+      </section>
+      <section className="bar b">
+        <h1 className="title">We use the best</h1>
+        <p className="subtitle">Explore our innovative skincare products</p>
+      </section>
+      <section className="ingredient-section">
+        <div>
+          {new Array(10).fill({}).map(() => {
+            return <IngredientExcerpt />;
+          })}
+        </div>
+      </section>
     </main>
   );
 }

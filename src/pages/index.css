@@ -54,20 +54,8 @@
   }
 }
 
-/* Products section  */
-.home-page .product-section {
-  width: 100%;
-  min-height: 70vh;
-}
-.home-page .product-section > * {
-  width: 100%;
-  margin-inline: auto;
-  max-width: var(--max-gutter-width);
-  display: grid;
-  grid-template-rows: minmax(2rem, 141px) auto;
-  gap: 1rem;
-}
-.home-page .product-section .bar {
+.home-page .bar {
+  height: 141px;
   /* border: 2px solid green; */
   display: flex;
   align-items: center;
@@ -76,19 +64,26 @@
   text-align: center;
   border: 1px solid #547665;
 }
-.home-page .product-section .bar .title {
+.home-page .bar .title {
   font-weight: 600;
   font-size: var(--f-size-3x);
 }
-.home-page .product-section .bar .subtitle {
+.home-page .bar .subtitle {
   font-size: var(--f-size-2x);
 }
-.home-page .product-section .body {
+
+/* Products section  */
+.home-page .product-section {
+  width: 100%;
+  min-height: 70vh;
+  margin-top: var(--margin-3x);
+}
+.home-page .product-section .content {
   display: grid;
   grid-template-rows: minmax(2rem, 3rem) 1fr;
   /* border: 2px solid green; */
 }
-.home-page .product-section .body .headline {
+.home-page .product-section .content .headline {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -100,13 +95,30 @@
   max-width: var(--max-gutter-width);
   margin-inline: auto;
 }
-.home-page .product-section .body .products {
+.home-page .product-section .content .products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(5rem, 15rem));
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 10rem));
   align-items: center;
   padding: 1rem 0;
   justify-content: center;
   gap: 2vh;
 }
 
-/* Teaser Section */
+.bar.b {
+  border: none;
+}
+
+/* ingredients section */
+
+/* .home-page .ingredient-section {
+  margin-top: var(--margin-3x);
+} */
+.home-page .ingredient-section > * {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 10rem));
+  gap: 1vh;
+  align-items: center;
+  justify-content: center;
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+}

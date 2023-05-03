@@ -10,7 +10,9 @@
   --f-size-5x: 40px;
   --f-size-6x: 48px;
 
-  --section-margin-top: 1rem;
+  --margin-1x: 1rem;
+  --margin-2x: 2rem;
+  --margin-3x: 3rem;
 }
 
 @media (max-width: 768px) {
