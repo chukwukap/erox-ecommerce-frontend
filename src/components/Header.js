@@ -74,13 +74,13 @@ function Header({ mobileMenuState }) {
               )}
             </li>
             <li className="link about">
-              <NavLink>ABOUT</NavLink>
+              <NavLink to={"/about"}>ABOUT</NavLink>
             </li>
             <li className="link consultation">
               <NavLink>Consultation</NavLink>
             </li>
             <li className="link logo">
-              <NavLink>
+              <NavLink to={"/"}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="43.264"
@@ -138,7 +138,7 @@ function Header({ mobileMenuState }) {
             <Link>vitiligio</Link>
           </nav>
           <div className="extra-links">
-            <Link>About</Link>
+            <Link to={"/about"}>About</Link>
             <Link>Consultation</Link>
           </div>
         </div>

@@ -4,18 +4,23 @@
 // import EditPostForm from "./features/posts/EditPostForm";
 // import UsersList from "./features/users/UsersList";
 // import UserPage from "./features/users/UserPage";
+import NotFound from "./pages/404.js";
 import Layout from "./components/Layout";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Public from "./components/Public";
 import useTitle from "./hooks/useTitle";
+import About from "./pages/About.js";
+import Home from "./pages/Home.js";
 
 function App() {
   useTitle("Erox");
   return (
     <Routes>
       <Route path="/*" element={<Layout />}>
-        <Route index path="/*" element={<Public />} />
+        {/* public Routes */}
+        <Route index element={<Home />} />
+        <Route path="about" element={<About />} />
 
+        {/* Protected routes */}
         {/* <Route path="post">
           <Route index element={<AddPostForm />} />
           <Route path=":postId" element={<SinglePostPage />} />
@@ -28,7 +33,7 @@ function App() {
         </Route> */}
 
         {/* Catch all - replace with 404 component if you want */}
-        <Route path="*" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );

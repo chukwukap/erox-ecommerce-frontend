@@ -22,9 +22,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="bar">
-        <h1 className="title">solutions for all skin health</h1>
-        <p className="subtitle">Explore our innovative skincare products</p>
+      <section className="belt">
+        <h1 className="belt__title">solutions for all skin health</h1>
+        <p className="belt__prgh">Explore our innovative skincare products</p>
       </section>
       <section className="product-section">
         <div>
@@ -43,7 +43,26 @@ function Home() {
           </div>
         </div>
       </section>
-      <TeaserSection teaser={{}} />
+      <section className={"teaser-section"}>
+        <div className="teaser-section__info">
+          <div>
+            <h1 className="teaser-section__title">
+              {"Clean products that deliver better solutions"}
+            </h1>
+            <p className="teaser-section__desc">
+              {
+                "A healthier you from the inside out. We've sourced the cleanest ingredients to create a line of clean skin care"
+              }
+            </p>
+            <Button className="teaser-section__btn btn--btn1">Shop more</Button>
+          </div>
+        </div>
+        <img
+          src={"assets/img/teaser.png"}
+          className="teaser-section__img"
+          alt="teaser "
+        />
+      </section>
       <section className="product-section">
         <div className="content">
           <div className="headline">
@@ -59,9 +78,9 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="bar b">
-        <h1 className="title">We use the best</h1>
-        <p className="subtitle">Explore our innovative skincare products</p>
+      <section className="belt ingredient">
+        <h1 className="belt__title">We use the best</h1>
+        <p className="belt__prgh">Explore our innovative skincare products</p>
       </section>
       <section className="ingredient-section">
         <div>
