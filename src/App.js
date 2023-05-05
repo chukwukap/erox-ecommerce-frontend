@@ -10,6 +10,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import useTitle from "./hooks/useTitle";
 import About from "./pages/About.js";
 import Home from "./pages/Home.js";
+import Acne from "./pages/Acne.js";
 
 function App() {
   useTitle("Erox");
@@ -19,7 +20,7 @@ function App() {
         {/* public Routes */}
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
-
+        <Route path="acne" element={<Acne />} />
         {/* Protected routes */}
         {/* <Route path="post">
           <Route index element={<AddPostForm />} />

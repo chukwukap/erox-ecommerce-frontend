@@ -227,29 +227,31 @@
 }
 
 .product-excerpt {
-  /* border: 2px solid maroon; */
-  max-width: 251px;
+  min-height: 345px;
+
+  height: 462px;
   display: grid;
-  grid-template-rows: 15rem 1fr;
+  grid-template-rows: 60% 40%;
+  grid-template-columns: minmax(150px, 251.31px);
 }
 .product-excerpt__img {
-  background-color: white;
-  /* border: 2px solid midnightblue; */
-}
-.product-excerpt__img img {
-  object-fit: cover;
+  background-color: #fff;
   height: 100%;
   width: 100%;
-  aspect-ratio: 7/ 7;
+  object-fit: cover;
 }
-.product-excerpt__img .sample-img {
+.product-excerpt__img.sample-img {
   display: none;
 }
-.product-excerpt__img:hover .product-img {
+.product-excerpt:hover .product-img {
   display: none;
 }
-.product-excerpt__img:hover .sample-img {
+.product-excerpt:hover .sample-img {
   display: block;
+}
+
+.product-excerpt__meta {
+  margin-top: auto;
 }
 .product-excerpt__name {
   font-size: var(--f-size-2x);
@@ -273,7 +275,21 @@
   cursor: pointer;
   border-width: 1px;
 }
-
+.product-excerpt--wide {
+  height: 329px;
+  grid-template-columns: minmax(200px, 294px);
+}
+.product-excerpt--tall {
+  height: 345px;
+  grid-template-columns: minmax(100px, 160px);
+}
+@media (max-width: 768px) {
+  .product-excerpt {
+    height: 345px;
+    grid-template-columns: minmax(100px, 150px);
+  }
+}
+/* ingredients */
 .ingredient-excerpt {
   max-width: 15rem;
   text-align: center;
@@ -483,7 +499,74 @@
   font-size: var(--f-size-1x);
   font-weight: 600;
 }
+/* dropdown */
 
+.dropdown {
+  max-width: 247px;
+  display: grid;
+  flex-direction: column;
+  grid-auto-rows: minmax(2rem, 2.3rem);
+  border: 1px solid #354e57;
+}
+.dropdown__option,
+.dropdown__preview {
+  font-size: 14px;
+  font-weight: 500;
+  color: #2e2e22;
+  text-align: left;
+  border: none;
+  background-color: inherit;
+  padding: 0 0.7rem;
+}
+.dropdown__preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+.dropdown__preview > .title {
+  font-weight: bold;
+}
+.dropdown__preview > .current {
+  text-transform: capitalize;
+}
+.dropdown__preview > .caret {
+  width: 10.991px;
+  height: 6.284px;
+  transition: transform 0.2s ease;
+  margin-inline-start: auto;
+}
+.dropdown.open .caret {
+  transform: rotate(180deg);
+}
+
+.dropdown__option {
+  cursor: pointer;
+  display: none;
+}
+.dropdown__option.active {
+  font-weight: bold;
+}
+
+.dropdown__option:hover {
+  background-color: #e4ecef;
+}
+.dropdown.open .dropdown__option {
+  display: block;
+}
+
+.link-group {
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: capitalize;
+}
+.link-group > .children {
+  font-weight: normal;
+  padding: 0 0.5rem;
+}
+.link-group > .children > * {
+  display: block;
+}
 /* _________________________-__-__-
  ______________________________
  ____________________________utils

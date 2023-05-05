@@ -1,20 +1,19 @@
 import Button from "./Button.js";
 
-function ProductExcerpt() {
+function ProductExcerpt({ className }) {
   return (
-    <article className="product-excerpt">
-      <div className="product-excerpt__img">
-        <img
-          className="product-img"
-          src="assets/img/vitiligio.png"
-          alt="vitiligio"
-        />
-        <img
-          className="sample-img"
-          src="assets/img/product-sample.png"
-          alt="product sample"
-        />
-      </div>
+    <article className={className + "    product-excerpt"}>
+      {/* one of the images will actually get displayed at a time */}
+      <img
+        className="product-img product-excerpt__img"
+        src="assets/img/vitiligio.png"
+        alt="vitiligio"
+      />
+      <img
+        className="sample-img product-excerpt__img"
+        src="assets/img/product-sample.png"
+        alt="product sample"
+      />
       <div className="product-excerpt__meta">
         <h1 className="product-excerpt__name">Vitiligio Solution</h1>
         <p className="product-excerpt__desc">All Natural Ingredients.</p>

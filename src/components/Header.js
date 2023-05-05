@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
+import CategoryNav from "./CategoryNav";
 function Header({ mobileMenuState }) {
   function toggleMobileMenu(ev) {
     mobileMenuState.setIsMobileMenuActive((prev) => !prev);
@@ -130,13 +131,7 @@ function Header({ mobileMenuState }) {
               : "bar2"
           }
         >
-          <nav className="nav">
-            <Link>Acne</Link>
-            <Link>Sun</Link>
-            <Link>Ezcema</Link>
-            <Link>Psoriasis</Link>
-            <Link>vitiligio</Link>
-          </nav>
+          <CategoryNav />
           <div className="extra-links">
             <Link to={"/about"}>About</Link>
             <Link>Consultation</Link>
