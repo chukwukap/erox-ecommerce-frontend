@@ -1,3 +1,4 @@
+import { nanoid } from "@reduxjs/toolkit";
 import Button from "../components/Button";
 import NewsTeaser from "../components/NewsTeaser";
 import useTitle from "../hooks/useTitle.js";
@@ -76,6 +77,7 @@ function About() {
             {new Array(10).fill({}).map((img) => {
               return (
                 <img
+                  key={nanoid()}
                   src="assets/img/teaser.png"
                   alt="i"
                   className="img-grid-section__img"
@@ -93,7 +95,7 @@ function About() {
           </div>
           <div className="news-section__grid-box">
             {new Array(5).fill({}).map((img) => {
-              return <NewsTeaser />;
+              return <NewsTeaser key={nanoid()} />;
             })}
           </div>
         </div>

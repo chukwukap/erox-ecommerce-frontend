@@ -61,6 +61,9 @@ button,
 select {
   font: inherit;
 }
+input {
+  text-indent: 0.4rem;
+}
 a {
   color: inherit;
 }

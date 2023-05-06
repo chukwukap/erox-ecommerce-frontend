@@ -44,9 +44,9 @@ function Header({ mobileMenuState }) {
                       transform="translate(0 -2.684)"
                       fill="none"
                       stroke="#354e57"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                     <path
                       id="Path_2881"
@@ -55,9 +55,9 @@ function Header({ mobileMenuState }) {
                       transform="translate(0)"
                       fill="none"
                       stroke="#354e57"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                     <path
                       id="Path_2882"
@@ -66,9 +66,9 @@ function Header({ mobileMenuState }) {
                       transform="translate(0 -5.369)"
                       fill="none"
                       stroke="#354e57"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                   </g>
                 </svg>
@@ -117,10 +117,10 @@ function Header({ mobileMenuState }) {
               </NavLink>
             </li>
             <li className="link cart">
-              <NavLink>cart</NavLink>
+              <NavLink to={"/cart"}>cart</NavLink>
             </li>
             <li className="link login">
-              <NavLink>Login</NavLink>
+              <NavLink to={"auth"}>Login</NavLink>
             </li>
           </ul>
         </div>

@@ -2,6 +2,7 @@ import Button from "../components/Button.js";
 import ProductExcerpt from "../components/ProductExcerpt.js";
 import { Link } from "react-router-dom";
 import IngredientExcerpt from "../components/IngredientExcerpt.js";
+import { nanoid } from "@reduxjs/toolkit";
 function Home() {
   return (
     <main className="home-page">
@@ -35,7 +36,7 @@ function Home() {
           </div>
           <div className="product-section__products">
             {new Array(10).fill({}).map((product) => {
-              return <ProductExcerpt product={product} />;
+              return <ProductExcerpt key={nanoid()} product={product} />;
             })}
           </div>
         </div>
@@ -70,7 +71,7 @@ function Home() {
           </div>
           <div className="product-section__products">
             {new Array(10).fill({}).map((product) => {
-              return <ProductExcerpt product={product} />;
+              return <ProductExcerpt key={nanoid()} product={product} />;
             })}
           </div>
         </div>
@@ -82,7 +83,7 @@ function Home() {
       <section className="ingredient-section">
         <div>
           {new Array(10).fill({}).map(() => {
-            return <IngredientExcerpt />;
+            return <IngredientExcerpt key={nanoid()} />;
           })}
         </div>
       </section>
@@ -158,9 +159,9 @@ function Home() {
                 transform="translate(-1.667 0.156)"
                 fill="none"
                 stroke="#c6b9b6"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="3"
               />
             </svg>
             <h1 className="three-element-card__title">Curbside pickup</h1>

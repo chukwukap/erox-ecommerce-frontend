@@ -92,6 +92,7 @@ function Acne() {
             {new Array(10).fill({}).map((product) => {
               return (
                 <ProductExcerpt
+                  key={nanoid()}
                   className="product-excerpt--wide"
                   product={product}
                 />

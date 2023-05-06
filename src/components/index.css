@@ -160,7 +160,7 @@
 }
 
 .btn--btn3:disabled {
-  border: 2px solid #2b434b;
+  border: 1px solid #2b434b;
   color: #2b434b;
   background: #b9c1c4;
 }
@@ -189,7 +189,7 @@
 
 .subscribe-form {
   display: flex;
-  border: 2px solid #a67744;
+  border: 1px solid #a67744;
   height: 40px;
   max-width: 357px;
 }
@@ -309,8 +309,186 @@
   color: #2e2e22;
   font-size: var(--f-size-1x);
 }
-.footer {
+
+.product-carousel {
   margin-top: var(--margin-3x);
+  max-width: 648px;
+  height: 70vh;
+  /* border: 2px solid yellow; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.product-carousel > * {
+  position: relative;
+  width: 95%;
+  height: 95%;
+  /* border: 2px solid magenta; */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+  gap: 1vh;
+}
+.product-carousel__btn {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+}
+.product-carousel__btn.right {
+  right: 5%;
+}
+.product-carousel__btn.left {
+  left: 5%;
+}
+
+.product-carousel__current-img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.product-carousel__imgs {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  grid-template-rows: 100%;
+  /* border: 2px solid maroon; */
+  gap: 0.5vh;
+}
+.product-carousel__imgs > img {
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.accordion {
+  max-width: 716px;
+  height: fit-content;
+  border-bottom: 1px solid #a8a8a8;
+  cursor: pointer;
+  padding-left: 1rem;
+  color: #354e57;
+}
+.accordion__header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion__headline {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 12px;
+}
+.accordion__body {
+  font-size: 14px;
+  padding-bottom: 1rem;
+}
+
+.product-info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5vh;
+}
+.product-info-card__title {
+  font-size: var(--f-size-3x);
+  font-weight: bold;
+  color: #354e57;
+}
+.product-info-card__quantity {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(2rem, 2.5rem));
+  grid-template-rows: minmax(2rem, 2.5rem);
+  color: #354e57;
+}
+.product-info-card__quantity > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #354e57;
+  background: none;
+  cursor: pointer;
+}
+.product-info-card__quantity > .quant {
+  border-left: none;
+  border-right: none;
+  cursor: default;
+}
+.product-info-card__btn {
+  width: 100%;
+  border-width: 1px;
+}
+/* login and register page shares this styles */
+.auth-section {
+  width: 100%;
+  min-height: 80vh;
+  display: grid;
+  place-items: center;
+}
+.auth-section > * {
+  display: grid;
+  grid-template-columns: minmax(100px, 348px);
+  gap: 2vh;
+  justify-content: center;
+  margin-inline: auto;
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+}
+
+.auth-section__headline {
+  color: #354e57;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.auth-section__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.auth-section__input,
+.auth-section__btn {
+  width: 100%;
+  height: 47px;
+  background: #fff;
+  border: 1px solid #bacad1;
+  border-radius: 3px;
+}
+.auth-section__input {
+  text-indent: 1rem;
+}
+.auth-section__input:focus {
+  outline: none;
+}
+.auth-section__input::placeholder {
+  font-size: 14px;
+  color: #354e57;
+  padding-left: 0.1rem;
+}
+.auth-section__btn {
+  margin-top: 0.5rem;
+  background-color: #354e57;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+.auth-section__btn:hover {
+  transform: scale(0.99);
+}
+.auth-section__links {
+  font-size: 14px;
+  color: #354e57;
+}
+.footer {
   min-height: 30vh;
   width: 100%;
   justify-self: flex-end;
@@ -617,9 +795,14 @@
 .teaser-section__btn:hover {
   color: #2b434b;
 }
-
+.teaser-section--inverted {
+  flex-direction: row-reverse;
+}
 @media (max-width: 768px) {
   .teaser-section {
+    flex-direction: column;
+  }
+  .teaser-section--inverted {
     flex-direction: column;
   }
   .teaser-section > * {

@@ -18,7 +18,7 @@ function Dropdown({ className }) {
       }
       onClick={toggleIsOpen}
     >
-      <button className="dropdown__preview" uncheck>
+      <button className="dropdown__preview">
         <span className="title">Sort by:</span>{" "}
         <span className="current">{value}</span>
         <svg

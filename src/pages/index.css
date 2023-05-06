@@ -313,7 +313,11 @@
   gap: 3vh;
 }
 
-/* Category Page (acne) */
+/* **************************
+                    Category Page (acne) 
+                    
+*****************************
+ */
 
 .category-section {
   min-height: 100vh;
@@ -366,3 +370,108 @@
 ._category .teaser-section__info {
   background-color: #a67744;
 }
+
+/* **************************
+                    single product Page  
+                    
+*****************************
+ */
+.single-product-page {
+  min-height: 100vh;
+}
+.single-product-section {
+  min-height: 50vh;
+  margin-top: var(--margin-2x);
+  /* border: 2px solid burlywood; */
+}
+.single-product-section > * {
+  /* height: 80%; */
+  margin-inline: auto;
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-auto-rows: auto;
+  gap: 2vh;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid midnightblue; */
+}
+.single-product-section .product-carousel {
+  align-self: flex-start;
+}
+@media (max-width: 768px) {
+  .single-product-section > * {
+    grid-template-columns: auto;
+  }
+}
+
+.related-products-section {
+  margin-top: var(--margin-3x);
+}
+.related-products-section > * {
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+  margin-inline: auto;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.related-products-section__headline {
+  font-size: var(--f-size-4x);
+  font-weight: bold;
+  color: #354e57;
+  text-align: center;
+}
+.related-products-section__products {
+  margin-top: var(--margin-2x);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vh;
+}
+.related-products-section__products > * {
+  flex: 1;
+}
+
+/* ingredients section begins here */
+.ingredient-section {
+  margin-top: var(--margin-3x);
+}
+.ingredient-section > * {
+  width: var(--gutter-width);
+  max-width: var(--max-gutter-width);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  margin-inline: auto;
+}
+.ingredient-section__header {
+  text-align: center;
+}
+.ingredient-section__header .title {
+  font-size: var(--f-size-4x);
+  font-weight: bold;
+}
+.ingredient-section__header .subtitle {
+  font-size: var(--f-size-2x);
+}
+.ingredient-section__ingredients {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2vh;
+}
+.ingredient-section__ingredients > * {
+  flex: 1;
+}
+
+.single-product-page .teaser-section {
+  margin-top: var(--margin-3x);
+}
+.single-product-page .teaser-section__info {
+  background: #d7ccdd;
+}
+
+/* **************************
+                      AUTH - LOGIN, REGISTER PAGE
+*****************************
+ */

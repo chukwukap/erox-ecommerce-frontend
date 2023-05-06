@@ -6,11 +6,15 @@
 // import UserPage from "./features/users/UserPage";
 import NotFound from "./pages/404.js";
 import Layout from "./components/Layout";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import useTitle from "./hooks/useTitle";
 import About from "./pages/About.js";
 import Home from "./pages/Home.js";
 import Acne from "./pages/Acne.js";
+import ProductPage from "./features/products/ProductPage.js";
+import LoginPage from "./features/auth/LoginPage.js";
+import RegisterPage from "./features/auth/RegPage.js";
+import AccountExcerpt from "./features/auth/AccountPage.js";
 
 function App() {
   useTitle("Erox");
@@ -21,7 +25,17 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="acne" element={<Acne />} />
+        <Route path={"product"}>
+          <Route path=":productId" element={<ProductPage />} />
+        </Route>
+        <Route path="auth">
+          <Route index element={<LoginPage />} />
+          <Route index path="register" element={<RegisterPage />} />
+        </Route>
         {/* Protected routes */}
+        <Route path="account">
+          <Route index element={<AccountExcerpt />} />
+        </Route>
         {/* <Route path="post">
           <Route index element={<AddPostForm />} />
           <Route path=":postId" element={<SinglePostPage />} />

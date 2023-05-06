@@ -121,9 +121,9 @@ function Footer() {
                       transform="translate(-3 -3)"
                       fill="none"
                       stroke="#fff"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                     <path
                       id="Path_2876"
@@ -132,9 +132,9 @@ function Footer() {
                       transform="translate(-5.749 -5.71)"
                       fill="none"
                       stroke="#fff"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                     <path
                       id="Path_2877"
@@ -143,9 +143,9 @@ function Footer() {
                       transform="translate(-10.052 -5.047)"
                       fill="none"
                       stroke="#fff"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
                     />
                   </g>
                 </svg>
